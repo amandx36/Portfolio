@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const siteConfig: Metadata = {
-  title: "Aman Deep  | Space Portfolio",
-  description: "Welcome to my full stack space portfolio.",
+  title: "Aman Deep | Full-Stack Developer",
+  description: "Portfolio of Aman Deep, a full-stack, AI/ML, and DevOps developer.",
   keywords: [
     "reactjs",
     "nextjs",

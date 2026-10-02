@@ -10,32 +10,29 @@ import {
 
 export const SkillText = () => {
   return (
-    <div className="w-full h-auto flex flex-col items-center justify-center font-[Poppins]">
-      {/* Top Accent Box */}
+    <div className="mb-12 flex h-auto w-full flex-col items-center justify-center text-center sm:mb-16">
       <motion.div
         variants={slideInFromTop}
-        className="Welcome-box py-[8px] px-[7px] border border-[#ff7b00bb] opacity-[0.9] rounded-md flex items-center"
+        className="glass-panel flex items-center rounded-full px-3 py-1.5"
       >
-        <SparklesIcon className="text-[#ffb84d] mr-[10px] h-5 w-5" />
-        <h1 className="Welcome-text text-[13px] text-gray-200 font-light tracking-wide">
-          blending web and machine learning.
-        </h1>
+        <SparklesIcon className="mr-2 h-4 w-4 text-orange-300" />
+        <p className="text-xs font-medium tracking-wide text-zinc-200">MY TOOLKIT</p>
       </motion.div>
 
       {/* Main Title */}
       <motion.div
         variants={slideInFromLeft(0.5)}
-        className="text-[30px] text-white font-semibold mt-[10px] text-center mb-[15px] leading-tight"
+        className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl"
       >
-        Dream it. Code it. Ship it.
+        Built with focus, not clutter.
       </motion.div>
 
       {/* Subtext */}
       <motion.div
         variants={slideInFromRight(0.5)}
-        className="text-[20px] text-gray-300 mb-10 mt-[10px] text-center font-[Inter] tracking-wide"
+        className="mt-3 max-w-xl text-base leading-7 text-zinc-400"
       >
-        Never miss a task, deadline or idea.
+        A practical stack for thoughtfully engineered digital experiences.
       </motion.div>
     </div>
   );

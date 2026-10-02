@@ -4,35 +4,35 @@ import { FOOTER_DATA } from "@/constants";
 
 export const Footer = () => {
   return (
-    <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px]">
-      <div className="w-full flex flex-col items-center justify-center m-auto">
-        <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
+    <footer className="shell border-t border-white/10 py-10 text-zinc-400">
+      <div className="flex flex-col items-center justify-center gap-10">
+        <div className="flex w-full flex-row flex-wrap items-start justify-center gap-10 sm:justify-around">
           {FOOTER_DATA.map((column) => (
             <div
               key={column.title}
-              className="min-w-[200px] h-auto flex flex-col items-center justify-start"
+              className="flex min-w-[140px] flex-col items-center"
             >
-              <h3 className="font-bold text-[16px]">{column.title}</h3>
+              <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-200">{column.title}</h3>
               {column.data.map(({ icon: Icon, name, link }) => (
                 <Link
                   key={`${column.title}-${name}`}
                   href={link}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="flex flex-row items-center my-[15px]"
+                  className="mt-4 flex items-center gap-2 text-sm transition hover:text-orange-300"
                 >
                   {Icon && <Icon />}
-                  <span className="text-[15px] ml-[6px]">{name}</span>
+                  <span>{name}</span>
                 </Link>
               ))}
             </div>
           ))}
         </div>
 
-        <div className="mb-[20px] mt-[20px] text-[15px] text-center">
-          &copy; Aman Deep {new Date().getFullYear()} Inc. All rights reserved.
+        <div className="text-center text-sm">
+          &copy; Aman Deep {new Date().getFullYear()}. All rights reserved.
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
