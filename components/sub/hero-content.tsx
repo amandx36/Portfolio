@@ -52,7 +52,7 @@ export const HeroContent = () => {
         <motion.a
           variants={slideInFromLeft(1)}
           href="#projects"
-          className="mx-auto flex w-fit items-center justify-center rounded-full border border-orange-300/50 bg-orange-400/10 px-6 py-3 text-sm font-semibold text-white shadow-[0_0_30px_rgba(249,115,22,0.12)] transition hover:-translate-y-0.5 hover:bg-orange-400/20 hover:shadow-[0_0_35px_rgba(249,115,22,0.25)] md:mx-0"
+          className="mx-auto flex w-fit items-center justify-center rounded-full border border-white/25 bg-white/[0.09] px-6 py-3 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_8px_28px_rgba(0,0,0,0.24),0_0_30px_rgba(249,115,22,0.12)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-orange-200/50 hover:bg-orange-300/[0.16] hover:shadow-[0_0_35px_rgba(249,115,22,0.25)] md:mx-0"
         >
           Learn more
         </motion.a>

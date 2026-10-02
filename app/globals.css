@@ -22,7 +22,15 @@ body {
   }
 
   .glass-panel {
-    @apply border border-white/10 bg-white/[0.045] shadow-[0_16px_60px_rgba(0,0,0,0.45)] backdrop-blur-xl;
+    @apply relative border border-white/20 bg-white/[0.08] shadow-[inset_0_1px_0_rgba(255,255,255,0.22),inset_0_-1px_0_rgba(255,255,255,0.06),0_18px_55px_rgba(0,0,0,0.32)] backdrop-blur-2xl;
+    background-image: linear-gradient(135deg, rgba(255,255,255,.13), rgba(255,255,255,.025) 42%, rgba(249,115,22,.045));
+  }
+
+  .glass-panel::before {
+    content: "";
+    @apply pointer-events-none absolute inset-0 rounded-[inherit];
+    background: linear-gradient(115deg, rgba(255,255,255,.14), transparent 28%, transparent 72%, rgba(255,255,255,.045));
+    opacity: .8;
   }
 
   .section-kicker {

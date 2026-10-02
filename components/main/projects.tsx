@@ -5,11 +5,13 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className="shell flex flex-col items-center"
+      className="shell flex flex-col items-center py-10"
     >
       <div className="mb-12 text-center sm:mb-16">
         <p className="section-kicker mb-3">Selected work</p>
-        <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Things I&apos;ve built.</h2>
+        <h2 className="bg-gradient-to-r from-amber-400 via-orange-500 to-red-600 bg-clip-text text-4xl font-semibold text-transparent sm:text-5xl">
+          My Projects
+        </h2>
       </div>
 
       {/* Cards */}

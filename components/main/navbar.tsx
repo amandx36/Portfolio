@@ -11,7 +11,7 @@ export const Navbar = () => {
   const closeMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/[0.07] bg-black/65 backdrop-blur-xl">
+    <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/15 bg-gradient-to-r from-black/55 via-orange-950/30 to-black/55 shadow-[0_8px_40px_rgba(0,0,0,0.22),inset_0_-1px_0_rgba(255,255,255,0.08)] backdrop-blur-2xl">
       <div className="shell flex h-[72px] items-center justify-between">
         {/* Logo & Name */}
         <Link 
@@ -33,7 +33,7 @@ export const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="glass-panel hidden items-center gap-7 rounded-full px-6 py-2 md:flex">
+        <div className="glass-panel hidden items-center gap-7 rounded-full px-7 py-2.5 md:flex">
           {NAV_LINKS.map((link) => (
             <Link 
               key={link.title} 
