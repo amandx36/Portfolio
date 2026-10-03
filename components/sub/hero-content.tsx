@@ -10,32 +10,32 @@ export const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col-reverse md:flex-row items-center justify-center px-6 md:px-20 mt-16 md:mt-40 w-full z-[20]"
+      className="shell flex w-full flex-col-reverse items-center justify-between gap-12 py-16 md:flex-row md:gap-16"
     >
       {/* Left Content */}
-      <div className="w-full flex flex-col gap-5 justify-center m-auto text-center md:text-start">
+      <div className="flex w-full max-w-2xl flex-col gap-6 text-center md:text-left">
         {/* Role Box */}
         <motion.div
           variants={slideInFromTop}
-          className="flex items-center justify-center md:justify-start gap-2 py-[6px] px-[6px] border border-[#ff7b00bb] opacity-[0.9] rounded-lg max-w-fit mx-auto md:mx-0"
+          className="glass-panel mx-auto flex max-w-fit items-center gap-2 rounded-full px-3 py-1.5 md:mx-0"
         >
-          <SparklesIcon className="text-[#ffb84d] h-4 w-4 md:h-5 md:w-5" />
-          <h1 className="text-[12px] md:text-[13px] text-gray-200 font-semibold">
-            Fullstack / AI-ML / DEVOPS Developer
-          </h1>
+          <SparklesIcon className="h-4 w-4 text-orange-300" />
+          <p className="text-xs font-medium tracking-wide text-zinc-200">
+            FULL-STACK · AI/ML · DEVOPS
+          </p>
         </motion.div>
 
         {/* Hero Heading */}
         <motion.h1
           variants={slideInFromLeft(0.5)}
-          className="text-3xl sm:text-4xl md:text-6xl font-bold text-white max-w-[600px] leading-tight"
+          className="max-w-xl text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl"
         >
           Merging{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-red-600">
+            <span className="bg-gradient-to-r from-orange-200 via-orange-400 to-amber-500 bg-clip-text text-transparent">
             Web Development
           </span>{" "}
           with{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-red-600">
+            <span className="bg-gradient-to-r from-orange-200 via-orange-400 to-amber-500 bg-clip-text text-transparent">
             Machine Intelligence
           </span>
         </motion.h1>
@@ -43,16 +43,16 @@ export const HeroContent = () => {
         {/* Description */}
         <motion.p
           variants={slideInFromLeft(0.8)}
-          className="text-base sm:text-lg text-gray-400 my-3 sm:my-4 max-w-[500px] mx-auto md:mx-0"
+          className="max-w-lg text-base leading-7 text-zinc-400 sm:text-lg sm:leading-8"
         >
-         I specialize in creating modern, data-driven web applications that combine Full Stack development, Machine Learning, and DevOps engineering.”
+         I build considered, data-driven products where reliable full-stack engineering meets practical machine intelligence.
         </motion.p>
 
         {/* Call-to-Action Button */}
         <motion.a
           variants={slideInFromLeft(1)}
           href="#projects"
-          className="py-4 px-5 sm:px-6 bg-transparent border-[#ff7b00bb] border-2 text-white text-base sm:text-base font-medium rounded-full shadow-lg transition-transform hover:scale-105 hover:shadow-[0_0_15px_#ff7b00aa] max-w-[110px] sm:max-w-[180px] mx-auto md:mx-0 flex items-center justify-center"
+          className="mx-auto flex w-fit items-center justify-center rounded-full border border-white/25 bg-white/[0.09] px-6 py-3 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_8px_28px_rgba(0,0,0,0.24),0_0_30px_rgba(249,115,22,0.12)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-orange-200/50 hover:bg-orange-300/[0.16] hover:shadow-[0_0_35px_rgba(249,115,22,0.25)] md:mx-0"
         >
           Learn more
         </motion.a>
@@ -61,7 +61,7 @@ export const HeroContent = () => {
       {/* Right Side Image */}
       <motion.div
         variants={slideInFromRight(0.8)}
-        className="w-full flex justify-center items-center mt-8 md:mt-0"
+        className="flex w-full max-w-xl items-center justify-center"
       >
         <Image
           src="/hero-bg.svg"
@@ -69,7 +69,7 @@ export const HeroContent = () => {
           height={400}
           width={400}
           draggable={false}
-          className="select-none drop-shadow-lg sm:h-[450px] sm:w-[450px] md:h-[500px] md:w-[500px]"
+          className="select-none drop-shadow-[0_0_70px_rgba(249,115,22,0.18)] sm:h-[440px] sm:w-[440px] lg:h-[520px] lg:w-[520px]"
         />
       </motion.div>
     </motion.div>

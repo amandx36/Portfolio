@@ -13,18 +13,19 @@ export const ProjectCard = ({ src, title, link }: ProjectCardProps) => {
       href={link}
       target="_blank"
       rel="noreferrer noopener"
-      className="w-full relative overflow-hidden rounded-lg shadow-lg hover:scale-[1.06] transition border border-transparent bg-gradient-to-r from-amber-700 via-orange-800 to-red-900 p-[1px]"
+      className="glass-panel group relative w-full overflow-hidden rounded-2xl transition duration-300 hover:-translate-y-1 hover:border-orange-300/40 hover:bg-white/[0.07]"
     >
-      <div className="bg-black rounded-lg">
+      <div>
         <Image
           src={src}
           alt={title}
           width={1000}
           height={1000}
-          className="w-full h-60 object-cover rounded-lg object-left-top"
+          className="h-56 w-full object-cover object-left-top opacity-85 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
         />
-        <div className="relative p-4">
-          <h1 className="text-2xl font-semibold text-white">{title}</h1>
+        <div className="relative p-5">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-orange-300">Open project ↗</p>
+          <h3 className="text-xl font-semibold leading-snug text-white">{title}</h3>
         </div>
       </div>
     </Link>

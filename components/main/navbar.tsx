@@ -11,35 +11,34 @@ export const Navbar = () => {
   const closeMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-[#03001427] backdrop-blur-md shadow-lg shadow-[#2A0E61]/50 z-50">
-      <div className="flex items-center justify-between h-[70px] px-5 md:px-10">
+    <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/15 bg-gradient-to-r from-black/55 via-orange-950/30 to-black/55 shadow-[0_8px_40px_rgba(0,0,0,0.22),inset_0_-1px_0_rgba(255,255,255,0.08)] backdrop-blur-2xl">
+      <div className="shell flex h-[72px] items-center justify-between">
         {/* Logo & Name */}
         <Link 
           href="#about-me" 
-          className="flex items-center gap-2" 
+          className="flex items-center gap-3"
           onClick={closeMenu}
         >
           <Image
             src="/logo.png"
             alt="Logo"
-            width={40}
-            height={40}
+            width={34}
+            height={34}
             draggable={false}
             className="cursor-pointer"
           />
-          <span className="hidden sm:block text-white font-bold tracking-wide">
-          <h1>I&apos;m Aman | Deep</h1>
-
+          <span className="hidden text-sm font-semibold tracking-wide text-white sm:block">
+            Aman Deep
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8 bg-[rgba(3,0,20,0.37)] px-8 py-2 rounded-full border border-[rgba(112,66,248,0.38)] text-gray-200">
+        <div className="glass-panel hidden items-center gap-7 rounded-full px-7 py-2.5 md:flex">
           {NAV_LINKS.map((link) => (
             <Link 
               key={link.title} 
               href={link.link} 
-              className="hover:text-[rgb(112,66,248)] transition font-medium"
+              className="text-sm font-medium text-zinc-300 transition hover:text-orange-300"
             >
               {link.title}
             </Link>
@@ -47,23 +46,23 @@ export const Navbar = () => {
         </div>
 
         {/* Social Links (Desktop) */}
-        <div className="hidden md:flex items-center gap-5">
+        <div className="hidden items-center gap-4 md:flex">
           {SOCIALS.map(({ link, name, icon: Icon }) => (
             <Link 
               key={name} 
               href={link} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center"
+              className="flex items-center text-zinc-300 transition hover:text-orange-300"
             >
-              <Icon className="h-6 w-6 text-white hover:text-[rgb(112,66,248)] transition" />
+              <Icon className="h-5 w-5" />
             </Link>
           ))}
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white text-3xl flex items-center justify-center"
+          className="flex items-center justify-center text-2xl text-white md:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -79,7 +78,7 @@ export const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed top-0 right-0 w-3/4 sm:w-1/2 h-screen bg-[#030014]/80 backdrop-blur-lg shadow-lg flex flex-col items-center justify-center text-gray-300 md:hidden"
+            className="fixed right-0 top-0 flex h-screen w-3/4 flex-col items-center justify-center border-l border-white/10 bg-black/90 text-zinc-300 backdrop-blur-2xl sm:w-1/2 md:hidden"
           >
             {/* Close Button */}
             <button
@@ -96,7 +95,7 @@ export const Navbar = () => {
                   key={link.title} 
                   href={link.link} 
                   onClick={closeMenu} 
-                  className="hover:text-[rgb(112,66,248)] transition"
+                  className="transition hover:text-orange-300"
                 >
                   {link.title}
                 </Link>
@@ -111,7 +110,7 @@ export const Navbar = () => {
                   href={link} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center"
+                  className="flex items-center transition hover:text-orange-300"
                 >
                   <Icon className="h-8 w-8 text-white hover:text-[rgb(112,66,248)] transition" />
                 </Link>

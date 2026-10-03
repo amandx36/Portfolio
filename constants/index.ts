@@ -1,6 +1,5 @@
-import { FaYoutube, FaFacebook } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 import {
-  RxDiscordLogo,
   RxGithubLogo,
   RxInstagramLogo,
   RxTwitterLogo,
@@ -85,93 +84,20 @@ export const SOCIALS = [
   },
 ] as const;
 
-export const FRONTEND_SKILL = [
-  {
-    skill_name: "HTML",
-    image: "html.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "CSS",
-    image: "css.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "JavaScript",
-    image: "js.png",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Tailwind CSS",
-    image: "tailwind.png",
-    width: 80,
-    height: 80,
-  },
-
-  {
-    skill_name: "React",
-    image: "react.png",
-    width: 80,
-    height: 80,
-  },
-
-
-  {
-    skill_name: "Next.js 14",
-    image: "next.png",
-    width: 80,
-    height: 80,
-  },
-] as const;
-
-export const BACKEND_SKILL = [
-  {
-    skill_name: "Node.js",
-    image: "node.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Express.js",
-    image: "express.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "MongoDB",
-    image: "mongodb.png",
-    width: 40,
-    height: 40,
-  },
-
-
-] as const;
-
-export const FULLSTACK_SKILL = [
-] as const;
-
-export const OTHER_SKILL = [
-
-] as const;
-
 export const PROJECTS = [
   {
-    title: "🧠 MindCare \nChatbot",
-    
+    title: "MindCare Chatbot",
     image: "/projects/project01.jpeg",
     link: "https://github.com/amandx36/safeTalk-AI-",
   },
   {
-    title: "–   AutoBackr  ",
+    title: "AutoBackr",
 
     image: "/projects/project02.jpeg",
     link: "https://github.com/amandx36/AutoBackr",
   },
   {
-    title: " The Swiss Army Knife CLI for Developers ",
+    title: "AI DevOps Copilot",
    
     image: "/projects/PROJECT03.jpeg",
     link: "https://github.com/amandx36/AI-DEVOPS-COPILOT",
@@ -229,5 +155,4 @@ export const NAV_LINKS = [
     link: "#projects",
   },
 ] as const;
-
 

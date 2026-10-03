@@ -5,16 +5,17 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center justify-center py-10" // ↓ reduced from py-20 → py-10
+      className="shell flex flex-col items-center py-10"
     >
-      {/* Title */}
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-red-600 mb-10"> 
-        {/* ↓ replaced py-20 with mb-10 for tighter spacing */}
-        My Projects
-      </h1>
+      <div className="mb-12 text-center sm:mb-16">
+        <p className="section-kicker mb-3">Selected work</p>
+        <h2 className="bg-gradient-to-r from-amber-400 via-orange-500 to-red-600 bg-clip-text text-4xl font-semibold text-transparent sm:text-5xl">
+          My Projects
+        </h2>
+      </div>
 
       {/* Cards */}
-      <div className="h-full w-full flex flex-col md:flex-row gap-8 px-8 md:px-10 justify-center items-center">
+      <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         {PROJECTS.map((project) => (
           <ProjectCard
             key={project.title}
